@@ -26,7 +26,7 @@ if exist data folder 'lyrics', folder strucure:
 -lyrics
    -rhymes
  ```
-lyric data (.csv) in lyrics, e.g.,
+lyric data (.csv) in lyrics folder, e.g.,
 |    | bands          | songs          | lyrics                                            |
 |---:|:---------------|:---------------|:--------------------------------------------------|
 |  0 | Little Richard | Tutti Frutti   | Wop-bop-a-loo-mop alop-bom-bom                    |
