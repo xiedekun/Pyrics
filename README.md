@@ -12,7 +12,34 @@ pip install Pyrics
 from Pyrics import Pyrics as prc
 
 prc = prc.Pyrics()
-#prc = prc.Pyrics(path)
+```
+if have exist data folder 'lyrics'
+```markdown
+folder format:
+-lyrics
+   -rhymes
+ ```
+lyric data (.csv) in lyrics, e.g.,
+|    | bands          | songs          | lyrics                                            |
+|---:|:---------------|:---------------|:--------------------------------------------------|
+|  0 | Little Richard | Tutti Frutti   | Wop-bop-a-loo-mop alop-bom-bom                    |
+|  1 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            |
+|  2 | Little Richard | Tutti Frutti   | Tutti frutti, woo!                                |
+|  3 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            |
+|  4 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            |
+|  5 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            
+
+rhyme data (.csv) in rhymes folder, e.g.,
+|    | bands          | songs          | lyrics                                            | rhymes   |
+|---:|:---------------|:---------------|:--------------------------------------------------|:---------|
+|  0 | Little Richard | Tutti Frutti   | Wop-bop-a-loo-mop alop-bom-bom                    | om       |
+|  1 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
+|  2 | Little Richard | Tutti Frutti   | Tutti frutti, woo!                                | u        |
+|  3 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
+|  4 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
+|  5 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
+```python
+prc = prc.Pyrics(path)
 ```
 ## Generate Datasets 
 ```python
