@@ -21,7 +21,7 @@ from Pyrics import Pyrics as prc
 
 prc = prc.Pyrics(path)
 ```
-if exist data folder 'lyrics', folder format:
+if exist data folder 'lyrics', folder strucure:
 ```markdown
 -lyrics
    -rhymes
