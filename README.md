@@ -1,5 +1,7 @@
 # Pyrics
 <font size =5>**Pyrics** is a tool to scrape lyrics, get rhymes, **generate** relevant lyrics with **rhymes**.
+
+Author: DK Xie
 <font>
 
 ## Installation
