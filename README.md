@@ -96,7 +96,7 @@ get_rhymes(lyrics)
 ```
 #### 2.Get the Lyrics with the Same Rhymes
 ```python
-get_rhymes_lyrics(lyrics=lyrics, artists, length=5, exclude=True, same=False, print_lyrics=False):
+get_rhymes_lyrics(lyrics=lyrics, artists=artists, length=5, exclude=True, same=False, print_lyrics=False):
 ```
 
 |    | bands         | songs                                | lyrics                                                   | rhymes   |
@@ -109,18 +109,20 @@ get_rhymes_lyrics(lyrics=lyrics, artists, length=5, exclude=True, same=False, pr
 |  5 | The Doors     | Break On Through (To The Other Side) | She get high                                             | a?       |
 
 
-#### 3.Get Relevant Lyrics about Input Lyrics
+#### 3.Get Relevant Lyrics contain Input Lyrics
 ```python
-get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
+lyrics = 'I love you'
+get_relevant_lyrics(lyrics=lyrics, artists=artists, length=5):
 ```
 
-|    | bands         | songs                        | lyrics                                                                                             | rhymes   |
-|---:|:--------------|:-----------------------------|:---------------------------------------------------------------------------------------------------|:---------|
-| 42 | Guns N' Roses | Don't Cry (Alternate Lyrics) | Don't you cry tonight, baby, maybe someday                                                         | e?       |
-| 58 | The Doors     | Good Rockin'                 | Well I heard the news, there's good rockin' tonight                                                | a?t      |
-| 25 | Guns N' Roses | Don't Cry                    | And don't you cry tonight                                                                          | a?t      |
-| 69 | Led Zeppelin  | Fool In The Rain             | Why can't I see you tonight?                                                                       | a?t      |
-| 65 | Led Zeppelin  | The Battle Of Evermore       | The dark Lord rides in force tonight                                                               | a?t      |
+|    | bands         | songs             | lyrics                                                                     | rhymes   |
+|---:|:--------------|:------------------|:---------------------------------------------------------------------------|:---------|
+| 18 | The Doors     | Ships w/Sails     | Well, you asked how much I love you                                        | u        |
+| 32 | Led Zeppelin  | Darlene           | And I love you, Yes I do                                                   | u        |
+| 31 | Led Zeppelin  | Darlene           | Cause I love you, Darlene                                                  | in       |
+| 12 | The Doors     | Hello, I Love You | Hello, I love you                                                          | u        |
+|  3 | Guns N' Roses | Prostitute        | Where would you go if I told you I love you and then walked away? Oh, yeah | ?        |
+int(None)
 
 
 
@@ -130,7 +132,7 @@ get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
 keyword = 'baby'
 artists = ['Guns N\' Roses', 'the doors','led zeppelin']
 ```
-#### 1.Generate Songs Lyrics about Keywords with Rhymes
+#### 1.Generate Songs Lyrics contain Keywords with Rhymes
 ```python
 generate_lyrics(inputs=keyword, artists=artists, paragraph_length=4, lyrics_length=16, relevant=True, same=False, print_lyrics=True )
 ```
