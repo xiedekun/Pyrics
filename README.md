@@ -2,19 +2,19 @@
 <font size =5>**Pyrics** is a tool to scrape lyrics, get rhymes, **generate** relevant lyrics with **rhymes**.
 <font>
 
-### Installation
+### ?.Installation
 ```python
 pip install Pyrics
 ```
 
-### 	Initilization
+### 	?.Initilization
 ```python
 from Pyrics import Pyrics as prc
 
 prc = prc.Pyrics()
 #prc = prc.Pyrics(path)
 ```
-### Generate Datasets 
+### ?.Generate Datasets 
 ```python
 artists = 'Led Zeppelin'
 ```
@@ -48,7 +48,49 @@ generate_rhymes(artist_search=artists)
 |    5 | Led Zeppelin | Good Times Bad Times                    | But I still don't seem to care                                                       | ?r       |
 
 
-### Core Function: Generate Songs Lyrics
+### ?.Basic Function
+
+```python
+lyrics = 'Don\'t you cry tonight'
+artists = ['Guns N\' Roses', 'the doors','led zeppelin']
+```
+#### 1.Get Rhymes of Lyrics
+```python
+get_rhymes(lyrics)
+
+=>'a?t'
+```
+#### 2.Get the Lyrics with the Same Rhymes
+```python
+get_rhymes_lyrics(lyrics=lyrics, artists, length=5, exclude=True, same=False, print_lyrics=False):
+```
+
+|    | bands         | songs                                | lyrics                                                   | rhymes   |
+|---:|:--------------|:-------------------------------------|:---------------------------------------------------------|:---------|
+|  0 | Led Zeppelin  | Heartbreaker                         | Abuse my love a thousand times                           | a?mz     |
+|  1 | The Doors     | Peace Frog                           | (She came) The women are crying                          | a???     |
+|  2 | Guns N' Roses | Oh My God                            | Well, this is better than a good compromise              | a?z      |
+|  3 | Guns N' Roses | Don't Cry                            | Talk to me softly, there's something in your eyes        | a?z      |
+|  4 | The Doors     | Someday Soon                         | But you're going to die                                  | a?       |
+|  5 | The Doors     | Break On Through (To The Other Side) | She get high                                             | a?       |
+
+
+#### 3.Get Relevant Lyrics about Input Lyrics
+```python
+get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
+```
+
+|    | bands         | songs                        | lyrics                                                                                             | rhymes   |
+|---:|:--------------|:-----------------------------|:---------------------------------------------------------------------------------------------------|:---------|
+| 42 | Guns N' Roses | Don't Cry (Alternate Lyrics) | Don't you cry tonight, baby, maybe someday                                                         | e?       |
+| 58 | The Doors     | Good Rockin'                 | Well I heard the news, there's good rockin' tonight                                                | a?t      |
+| 25 | Guns N' Roses | Don't Cry                    | And don't you cry tonight                                                                          | a?t      |
+| 69 | Led Zeppelin  | Fool In The Rain             | Why can't I see you tonight?                                                                       | a?t      |
+| 65 | Led Zeppelin  | The Battle Of Evermore       | The dark Lord rides in force tonight                                                               | a?t      |
+
+
+
+### ?.Core Function: Generate Songs Lyrics
 **Combine** the lyrics randomly to **generate** songs with **rhymes**
 ```python
 keyword = 'baby'
@@ -110,45 +152,3 @@ You don't have to go, oh, oh, oh, oh
 To a strange night of stone
 Oh yeah, oh yeah, oh, oh, oh
 ```
-
-### Basic Function
-
-```python
-lyrics = 'Don\'t you cry tonight'
-artists = ['Guns N\' Roses', 'the doors','led zeppelin']
-```
-#### 1.Get Rhymes of Lyrics
-```python
-get_rhymes(lyrics)
-
-=>'a?t'
-```
-#### 2.Get the Lyrics with the Same Rhymes
-```python
-get_rhymes_lyrics(lyrics=lyrics, artists, length=5, exclude=True, same=False, print_lyrics=False):
-```
-
-|    | bands         | songs                                | lyrics                                                   | rhymes   |
-|---:|:--------------|:-------------------------------------|:---------------------------------------------------------|:---------|
-|  0 | Led Zeppelin  | Heartbreaker                         | Abuse my love a thousand times                           | a?mz     |
-|  1 | The Doors     | Peace Frog                           | (She came) The women are crying                          | a???     |
-|  2 | Guns N' Roses | Oh My God                            | Well, this is better than a good compromise              | a?z      |
-|  3 | Guns N' Roses | Don't Cry                            | Talk to me softly, there's something in your eyes        | a?z      |
-|  4 | The Doors     | Someday Soon                         | But you're going to die                                  | a?       |
-|  5 | The Doors     | Break On Through (To The Other Side) | She get high                                             | a?       |
-
-
-#### 3.Get Relevant Lyrics about Input Lyrics
-```python
-get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
-```
-
-|    | bands         | songs                        | lyrics                                                                                             | rhymes   |
-|---:|:--------------|:-----------------------------|:---------------------------------------------------------------------------------------------------|:---------|
-| 42 | Guns N' Roses | Don't Cry (Alternate Lyrics) | Don't you cry tonight, baby, maybe someday                                                         | e?       |
-| 58 | The Doors     | Good Rockin'                 | Well I heard the news, there's good rockin' tonight                                                | a?t      |
-| 25 | Guns N' Roses | Don't Cry                    | And don't you cry tonight                                                                          | a?t      |
-| 69 | Led Zeppelin  | Fool In The Rain             | Why can't I see you tonight?                                                                       | a?t      |
-| 65 | Led Zeppelin  | The Battle Of Evermore       | The dark Lord rides in force tonight                                                               | a?t      |
-
-
