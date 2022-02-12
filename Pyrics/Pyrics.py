@@ -7,7 +7,7 @@ import eng_to_ipa as etipa
 import os
 from tqdm import tqdm
 
-__version__ = '0.0.2'
+__version__ = '0.0.1.1'
 
 class Pyrics:
     
@@ -209,7 +209,7 @@ class Pyrics:
             for artist in artists: 
                 data = data.append(self.__read_csv(artist, True))
 
-        match_lyrics = data[data['lyrics'].str.contains(lyrics.split()[-1])]
+        match_lyrics = data[data['lyrics'].str.contains(lyrics)]
             
         match_lyrics.reset_index(drop=True, inplace=True)
         output_size = match_lyrics.shape[0]
