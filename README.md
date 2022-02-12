@@ -3,6 +3,10 @@
 
 ./test/run.py provides the full function in terminal
 ```python
+cmd>> python run.py
+```
+or
+```python
 cmd>> conda activate
 conda>> python run.py
 ```
