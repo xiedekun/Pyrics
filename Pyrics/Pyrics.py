@@ -7,7 +7,7 @@ import eng_to_ipa as etipa
 import os
 from tqdm import tqdm
 
-__version__ = '0.0.1.1'
+__version__ = '0.0.1.1' 
 
 class Pyrics:
     
