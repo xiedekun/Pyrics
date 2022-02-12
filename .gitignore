@@ -1,6 +1,8 @@
 # folder
 /dist
 /Pyrics.egg-info
+/Pyrics/__pycache__
+/test/__pycache__
 
 #file
 .pypirc
