@@ -2,19 +2,19 @@
 <font size =5>**Pyrics** is a tool to scrape lyrics, get rhymes, **generate** relevant lyrics with **rhymes**.
 <font>
 
-### ?.Installation
+## Installation
 ```python
 pip install Pyrics
 ```
 
-### 	?.Initilization
+## Initilization
 ```python
 from Pyrics import Pyrics as prc
 
 prc = prc.Pyrics()
 #prc = prc.Pyrics(path)
 ```
-### ?.Generate Datasets 
+## Generate Datasets 
 ```python
 artists = 'Led Zeppelin'
 ```
@@ -48,7 +48,7 @@ generate_rhymes(artist_search=artists)
 |    5 | Led Zeppelin | Good Times Bad Times                    | But I still don't seem to care                                                       | ?r       |
 
 
-### ?.Basic Function
+## Basic Function
 
 ```python
 lyrics = 'Don\'t you cry tonight'
@@ -90,7 +90,7 @@ get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
 
 
 
-### ?.Core Function: Generate Songs Lyrics
+## Core Function: Generate Songs Lyrics
 **Combine** the lyrics randomly to **generate** songs with **rhymes**
 ```python
 keyword = 'baby'
