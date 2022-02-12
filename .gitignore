@@ -3,6 +3,7 @@
 /Pyrics.egg-info
 /Pyrics/__pycache__
 /test/__pycache__
+/test_jupyter
 
 #file
 .pypirc
