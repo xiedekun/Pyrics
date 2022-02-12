@@ -7,7 +7,7 @@
 pip install Pyrics
 ```
 
-## Initilization
+## Initialization
 #### Way 1: Not Exist Data
 ```python
 from Pyrics import Pyrics as prc
