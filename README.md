@@ -1,7 +1,7 @@
 # Pyrics
 <font size =5>**Pyrics** is a tool to scrape lyrics, get rhymes, **generate** relevant lyrics with **rhymes**.
 
-./text/run.py provides the full function in terminal
+./test/run.py provides the full function in terminal
 ```python
 cmd>> conda activate
 conda>> python run.py
