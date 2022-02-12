@@ -131,7 +131,6 @@ get_relevant_lyrics(lyrics=lyrics, artists=artists, length=5):
 | 31 | Led Zeppelin  | Darlene           | Cause I love you, Darlene                                                  | in       |
 | 12 | The Doors     | Hello, I Love You | Hello, I love you                                                          | u        |
 |  3 | Guns N' Roses | Prostitute        | Where would you go if I told you I love you and then walked away? Oh, yeah | ?        |
-int(None)
 
 
 
