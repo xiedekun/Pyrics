@@ -1,3 +1,6 @@
 # folder
 /dist
 /Pyrics.egg-info
+
+#file
+.pypirc
