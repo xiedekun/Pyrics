@@ -8,14 +8,20 @@ pip install Pyrics
 ```
 
 ## Initilization
+#### Way 1: Not Exist Data
 ```python
 from Pyrics import Pyrics as prc
 
 prc = prc.Pyrics()
 ```
-if have exist data folder 'lyrics'
-```markdown
+
+#### Wau 2: Exist Data
+```python
+prc = prc.Pyrics(path)
+```
+if exist data folder 'lyrics'
 folder format:
+```markdown
 -lyrics
    -rhymes
  ```
@@ -38,9 +44,7 @@ rhyme data (.csv) in rhymes folder, e.g.,
 |  3 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
 |  4 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
 |  5 | Little Richard | Tutti Frutti   | Tutti frutti, oh rutti                            | i        |
-```python
-prc = prc.Pyrics(path)
-```
+
 ## Generate Datasets 
 ```python
 artists = 'Led Zeppelin'
