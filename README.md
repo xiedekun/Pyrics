@@ -15,12 +15,11 @@ from Pyrics import Pyrics as prc
 prc = prc.Pyrics()
 ```
 
-#### Wau 2: Exist Data
+#### Wau 2: Already Exist Data
 ```python
 prc = prc.Pyrics(path)
 ```
-if exist data folder 'lyrics'
-folder format:
+if exist data folder 'lyrics', folder format:
 ```markdown
 -lyrics
    -rhymes
