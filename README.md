@@ -20,9 +20,10 @@ artists = 'Led Zeppelin'
 ```
 #### 1.Download Lyrics
 ```python
+#default iters_num = 1e20
 download_lyrics(artists=artists, iters_num = 5, delay_time=10, fluctuate_rate=5):
 ```
-```markdown
+
 |    | bands        | songs                     | lyrics                                                                          |
 |---:|:-------------|:--------------------------|:--------------------------------------------------------------------------------|
 |  0 | Led Zeppelin | Good Times Bad Times      | In the days of my youth, I was told what it means to be a man                   |
@@ -31,7 +32,7 @@ download_lyrics(artists=artists, iters_num = 5, delay_time=10, fluctuate_rate=5)
 |  3 | Led Zeppelin | Good Times Bad Times      | Good times, bad times, you know I've had my share                               |
 |  4 | Led Zeppelin | Good Times Bad Times      | When my woman left home with a brown eyed man                                   |
 |  5 | Led Zeppelin | Good Times Bad Times      | But I still don't seem to care         
-```
+
 #### 2.Generate Lyrics Data with Rhymes
 ```python
 generate_rhymes(artist_search=artists)
