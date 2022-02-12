@@ -37,7 +37,7 @@ download_lyrics(artists=artists, iters_num = 5, delay_time=10, fluctuate_rate=5)
 ```python
 generate_rhymes(artist_search=artists)
 ```
-```markdown
+
 |      | bands        | songs                                   | lyrics                                                                               | rhymes   |
 |-----:|:-------------|:----------------------------------------|:-------------------------------------------------------------------------------------|:---------|
 |    0 | Led Zeppelin | Good Times Bad Times                    | In the days of my youth, I was told what it means to be a man                        | ?n       |
@@ -46,7 +46,7 @@ generate_rhymes(artist_search=artists)
 |    3 | Led Zeppelin | Good Times Bad Times                    | Good times, bad times, you know I've had my share                                    | ?r       |
 |    4 | Led Zeppelin | Good Times Bad Times                    | When my woman left home with a brown eyed man                                        | ?n       |
 |    5 | Led Zeppelin | Good Times Bad Times                    | But I still don't seem to care                                                       | ?r       |
-```
+
 
 ### Core Function: Generate Songs Lyrics
 **Combine** the lyrics randomly to **generate** songs with **rhymes**
@@ -127,7 +127,7 @@ get_rhymes(lyrics)
 ```python
 get_rhymes_lyrics(lyrics=lyrics, artists, length=5, exclude=True, same=False, print_lyrics=False):
 ```
-```markdown
+
 |    | bands         | songs                                | lyrics                                                   | rhymes   |
 |---:|:--------------|:-------------------------------------|:---------------------------------------------------------|:---------|
 |  0 | Led Zeppelin  | Heartbreaker                         | Abuse my love a thousand times                           | a?mz     |
@@ -136,13 +136,13 @@ get_rhymes_lyrics(lyrics=lyrics, artists, length=5, exclude=True, same=False, pr
 |  3 | Guns N' Roses | Don't Cry                            | Talk to me softly, there's something in your eyes        | a?z      |
 |  4 | The Doors     | Someday Soon                         | But you're going to die                                  | a?       |
 |  5 | The Doors     | Break On Through (To The Other Side) | She get high                                             | a?       |
-```
+
 
 #### 3.Get Relevant Lyrics about Input Lyrics
 ```python
 get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
 ```
-```markdown
+
 |    | bands         | songs                        | lyrics                                                                                             | rhymes   |
 |---:|:--------------|:-----------------------------|:---------------------------------------------------------------------------------------------------|:---------|
 | 42 | Guns N' Roses | Don't Cry (Alternate Lyrics) | Don't you cry tonight, baby, maybe someday                                                         | e?       |
@@ -150,5 +150,5 @@ get_relevant_lyrics(lyrics=lyrics, artists=lyrics, length=5):
 | 25 | Guns N' Roses | Don't Cry                    | And don't you cry tonight                                                                          | a?t      |
 | 69 | Led Zeppelin  | Fool In The Rain             | Why can't I see you tonight?                                                                       | a?t      |
 | 65 | Led Zeppelin  | The Battle Of Evermore       | The dark Lord rides in force tonight                                                               | a?t      |
-```
+
 
