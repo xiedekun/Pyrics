@@ -17,6 +17,8 @@ prc = prc.Pyrics()
 
 #### Wau 2: Already Exist Data
 ```python
+from Pyrics import Pyrics as prc
+
 prc = prc.Pyrics(path)
 ```
 if exist data folder 'lyrics', folder format:
