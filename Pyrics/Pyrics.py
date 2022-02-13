@@ -7,7 +7,7 @@ import eng_to_ipa as etipa
 import os
 from tqdm import tqdm
 
-__version__ = '0.0.1.1' 
+__version__ = '0.0.1.2' 
 
 class Pyrics:
     
@@ -187,7 +187,7 @@ class Pyrics:
         
         if exclude:
             match_lyrics = match_lyrics[lyrics.split()[-1] != match_lyrics['lyrics']
-                                    .str.translate(str.maketrans(dict.fromkeys('!?.)";', '')))
+                                    .str.translate(str.maketrans(dict.fromkeys('!?.)\";\'', '')))
                                     .str.split().str[-1]]
             
         match_lyrics.reset_index(drop=True, inplace=True)
@@ -201,7 +201,7 @@ class Pyrics:
                 print(f"{i+1}.{match_lyrics.loc[i]['lyrics']} - {match_lyrics.loc[i]['bands']} <{match_lyrics.loc[i]['songs']}>", end='\n')
         return match_lyrics
 
-    def get_relevant_lyrics(self, lyrics, artists, length=10):
+    def get_relevant_lyrics(self, lyrics, artists, length=10, print_lyrics=False):
         data = pd.DataFrame()
         if isinstance(artists,str):
             data = data.append(self.__read_csv(artists, True))
@@ -209,13 +209,20 @@ class Pyrics:
             for artist in artists: 
                 data = data.append(self.__read_csv(artist, True))
 
-        match_lyrics = data[data['lyrics'].str.contains(lyrics)]
-            
+        match_lyrics = data[data['lyrics'].str.translate(
+                    str.maketrans(dict.fromkeys('!?.)\";\'', ''))).str.contains(lyrics)]      
+       
         match_lyrics.reset_index(drop=True, inplace=True)
         output_size = match_lyrics.shape[0]
         indice = np.random.randint(low=output_size, size=np.min((output_size, length)))
         
-        return match_lyrics.loc[indice]
+        match_lyrics = match_lyrics.loc[indice]
+        match_lyrics.reset_index(drop=True, inplace=True)
+        if print_lyrics:
+            for i in range(len(match_lyrics)):
+                print(f"{i+1}.{match_lyrics.loc[i]['lyrics']} - {match_lyrics.loc[i]['bands']} <{match_lyrics.loc[i]['songs']}>", end='\n')
+        
+        return match_lyrics
 
     def generate_lyrics(self, inputs, artists, paragraph_length=4, lyrics_length=16, relevant=True, same=False, print_lyrics=False ):
 
