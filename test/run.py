@@ -30,9 +30,10 @@ def main(mode_number, artists):
 
             while(True):
                 inputs = input('input keywords: \n')
-                print('')
                 if(inputs == ''):
                     raise ValueError('please input')
+                print('')
+
                 prc.get_relevant_lyrics(inputs, artists, print_lyrics=True)
         
 
