@@ -60,6 +60,7 @@ class Pyrics:
         #delay_time = 10 # delay time to get rid of being baned
         total_iters = np.min((iters_num, len(song_urls)))
         iters = 1
+        reconnect_time = 0
         with tqdm(total=total_iters) as pbar:
                 for content in zip(song_names, song_urls):
                     
@@ -76,14 +77,21 @@ class Pyrics:
                     #print(song_name)
                     pbar.set_description_str(f'{song_name}: delay time: {delay_time + fluctuate} ')
                     if len(lyric) == 0:
-                        print('You may be banned')
-                        break
+                        reconnect_time += 1
+                        if reconnect_time <= 3:
+                            continue
+                        else:
+                            print('You may be banned')
+                            break
                     pbar.update(1)
                     iters += 1
                     if (iters > iters_num or iters == len(song_urls)):
                         break
                     #print(f'delay: {delay_time + fluctuate}')
-                    time.sleep(delay_time + fluctuate)
+                    sleep_time = delay_time + fluctuate
+                    if iters % 200 == 0:
+                        sleep_time = 60
+                    time.sleep(sleep_time)
             
         #save file
         bands = [artist for i in range(len(lyrics))]
